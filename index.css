@@ -1,0 +1,39 @@
+h1 {
+  text-align: center;
+}
+
+.transport_container, .clothes_container{
+  width: 100%;
+  text-align: center;
+
+}
+.form{
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+button {
+  display: inline;
+  text-align: center;
+}
+p {
+  margin:0;
+  padding: 0;
+}
+
+img {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin-right: 20px;
+  padding: 0;
+}
+
+.answer_container {
+  display: block;
+  margin-top: 100px;
+  border: 3px solid black;
+  border-radius: 20px;
+  height: 100px;
+}
