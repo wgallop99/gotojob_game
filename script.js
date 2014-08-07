@@ -54,100 +54,100 @@ Transport.prototype.Transportation = function(worker) {
 };
 
 
-// $(document).ready(function(){
-//   page.init();
-// });
-//
-// var page = {
-//
-// init: function() {
-//   this.initStyling();
-//   this.initEvents();
-// },
-//
-// initStyling: function() {
-//
-//
-//
-// },
-//
-// initEvents: function() {
-// var randWorker;
-//
-//   $('form').on("submit", function(){
-//     event.preventDefault();
-//
-//     var ranNum = Math.floor(Math.random() * Workers.length);
-//     randWorker = Workers[ranNum];
-//     randWorker === Worker;
-//     console.log(randWorker);
-//
-//     $('#pick').text("You got " + randWorker.name);
-//   });
-//
-//   $('.clothes_container').on("click", "#formal", function() {
-//
-//     formal.Clothing(randWorker);
-//
-//     $("#pick1").text("You chose a Suit!");
-//
-//   });
-//
-//   $('.clothes_container').on("click", "#casual", function() {
-//     casual.Clothing(randWorker);
-//
-//     $("#pick1").text("You chose a Polo and some Khakis!");
-//
-//   });
-//
-//   $('.clothes_container').on("click", "#swim", function() {
-//     swimming.Clothing(randWorker);
-//
-//     $("#pick1").text("You chose a Bathing Suit!");
-//
-//   });
-//
-//   $('.clothes_container').on("click", "#active", function() {
-//     active.Clothing(randWorker);
-//
-//     $("#pick1").text("You chose a T-shirt and Shorts!");
-//   });
-//
-//   $('.transport_container').on('click', "#car", function(){
-//     car.Transportation(randWorker);
-//
-//     $("#pick2").text("Drive, Slow Homie");
-//   });
-//
-//   $('.transport_container').on('click','#plane', function(){
-//     plane.Transportation(randWorker);
-//
-//    $('#pick2').text("Fly, like a G6!");
-//   });
-//
-//   $('.transport_container').on('click','#run', function(){
-//     run.Transportation(randWorker);
-//
-//   $('#pick2').text("Runnnnnn Forrresst, Runnnn!");
-//   if(arrival > 0){
-//     $('#answer').text("You're early! Here's zero dollars");
-//   } else {
-//     $('#answer').text("You're late, and probably fired!");
-//   }
-//   });
-//
-//   $('.transport_container').on('click', '#bike', function(){
-//     bike.Transportation(randWorker);
-//
-//     $('#pick2').text("Don't forget your helmet!");
-//
-//   });
-//
-//   $('.transport_container').on('click', '#swim', function(){
-//     swim.Transportation(randWorker);
-//
-//   $('#pick2').text('Duhna.....Duhna...DuhnaDuhnaDuhna');
-// });
-//
-// }
-// };
+$(document).ready(function(){
+  page.init();
+});
+
+var page = {
+
+init: function() {
+  this.initStyling();
+  this.initEvents();
+},
+
+initStyling: function() {
+
+
+
+},
+
+initEvents: function() {
+var randWorker;
+
+  $('form').on("submit", function(){
+    event.preventDefault();
+
+    var ranNum = Math.floor(Math.random() * Workers.length);
+    randWorker = Workers[ranNum];
+    randWorker === Worker;
+    console.log(randWorker);
+
+    $('#pick').text("You got " + randWorker.name);
+  });
+
+  $('.clothes_container').on("click", "#formal", function() {
+
+    formal.Clothing(randWorker);
+
+    $("#pick1").text("You chose a Suit!");
+
+  });
+
+  $('.clothes_container').on("click", "#casual", function() {
+    casual.Clothing(randWorker);
+
+    $("#pick1").text("You chose a Polo and some Khakis!");
+
+  });
+
+  $('.clothes_container').on("click", "#swim", function() {
+    swimming.Clothing(randWorker);
+
+    $("#pick1").text("You chose a Bathing Suit!");
+
+  });
+
+  $('.clothes_container').on("click", "#active", function() {
+    active.Clothing(randWorker);
+
+    $("#pick1").text("You chose a T-shirt and Shorts!");
+  });
+
+  $('.transport_container').on('click', "#car", function(){
+    car.Transportation(randWorker);
+
+    $("#pick2").text("Drive, Slow Homie");
+  });
+
+  $('.transport_container').on('click','#plane', function(){
+    plane.Transportation(randWorker);
+
+   $('#pick2').text("Fly, like a G6!");
+  });
+
+  $('.transport_container').on('click','#run', function(){
+    run.Transportation(randWorker);
+
+  $('#pick2').text("Runnnnnn Forrresst, Runnnn!");
+  if(arrival > 0){
+    $('#answer').text("You're early! Here's zero dollars");
+  } else {
+    $('#answer').text("You're late, and probably fired!");
+  }
+  });
+
+  $('.transport_container').on('click', '#bike', function(){
+    bike.Transportation(randWorker);
+
+    $('#pick2').text("Don't forget your helmet!");
+
+  });
+
+  $('.transport_container').on('click', '#swim', function(){
+    swim.Transportation(randWorker);
+
+  $('#pick2').text('Duhna.....Duhna...DuhnaDuhnaDuhna');
+});
+
+}
+};
