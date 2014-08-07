@@ -12,8 +12,8 @@ var swimming = new Clothes ("bathing_suit", "bare_feet", 5);
 var Clothing = ["formal", "active", "casual", "swimming"];
 
 var Bob = new Worker ("Bob", "Builder", 60);
-var Anthony = new Worker ("Anthony", "Chef", 30);
-var Victoria = new Worker ("Victoria", "Model", 120);
+var Anthony = new Worker ("Anthony", "Chef", 90);
+var Victoria = new Worker ("Victoria", "Model", 130);
 var Workers = [Bob, Anthony, Victoria];
 
 
@@ -51,6 +51,7 @@ function Transport(type, trav_time) {
 Transport.prototype.Transportation = function(worker) {
   var arrival = worker.worktime - this.trav_time;
   worker.worktime = arrival;
+
 };
 
 
@@ -117,22 +118,33 @@ var randWorker;
     car.Transportation(randWorker);
 
     $("#pick2").text("Drive, Slow Homie");
+
+    if(randWorker.worktime >= 0){
+      $('#answer').text(randWorker.name + " is early! Have a Cookie!");
+    } else {
+      $('#answer').text(randWorker.name + " is late, and probably fired!");
+    }
   });
 
   $('.transport_container').on('click','#plane', function(){
     plane.Transportation(randWorker);
 
    $('#pick2').text("Fly, like a G6!");
+   if(randWorker.worktime >= 0){
+     $('#answer').text(randWorker.name + " is early! Have a Cookie!");
+   } else {
+     $('#answer').text(randWorker.name + " is late, and probably fired!");
+   }
   });
 
   $('.transport_container').on('click','#run', function(){
     run.Transportation(randWorker);
 
   $('#pick2').text("Runnnnnn Forrresst, Runnnn!");
-  if(arrival > 0){
-    $('#answer').text("You're early! Here's zero dollars");
+  if(randWorker.worktime >= 0){
+    $('#answer').text(randWorker.name + " is early! Have a Cookie!");
   } else {
-    $('#answer').text("You're late, and probably fired!");
+    $('#answer').text(randWorker.name + " is late, and probably fired!");
   }
   });
 
@@ -141,12 +153,25 @@ var randWorker;
 
     $('#pick2').text("Don't forget your helmet!");
 
+    if(randWorker.worktime >= 0){
+      $('#answer').text(randWorker.name + " is early! Have a Cookie!");
+    } else {
+      $('#answer').text(randWorker.name + " is late, and probably fired!");
+    }
+
   });
 
   $('.transport_container').on('click', '#swim', function(){
     swim.Transportation(randWorker);
 
   $('#pick2').text('Duhna.....Duhna...DuhnaDuhnaDuhna');
+
+  if(randWorker.worktime >= 0){
+    $('#answer').text(randWorker.name + " is early! Have a Cookie!").css("transition", "all 1s ease");
+    } else {
+    $('#answer').text(randWorker.name + " is late, and probably fired!");
+  }
+
 });
 
 }

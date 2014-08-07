@@ -1,3 +1,7 @@
+* {
+  font-family: futura;
+}
+
 h1 {
   text-align: center;
 }
@@ -9,7 +13,7 @@ h1 {
 }
 .form{
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 button {
@@ -19,6 +23,7 @@ button {
 p {
   margin:0;
   padding: 0;
+
 }
 
 img {
@@ -32,8 +37,15 @@ img {
 
 .answer_container {
   display: block;
-  margin-top: 100px;
+  margin-top: 50px;
   border: 3px solid black;
   border-radius: 20px;
   height: 100px;
+}
+
+#answer {
+  text-align: center;
+  font-size: 2em;
+  padding: 28px;
+
 }
